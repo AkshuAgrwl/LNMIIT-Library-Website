@@ -24,23 +24,6 @@ export default function Navbar() {
                 <Box margin={5}><Link href="/">Faculty Publications</Link></Box>
                 <Box margin={5}><Link href="/">BTP Reports</Link></Box>
                 <Box margin={5}><Link href="/">Open Access Resources</Link></Box>
-                {/* <Box margin={5}>
-                  <Popover trigger="hover">
-                    <PopoverTrigger>
-                      <Text>Mandatory Disclosures</Text>
-                    </PopoverTrigger>
-                    <Portal>
-                      <PopoverContent>
-                        <PopoverBody>
-                          <Box margin={5}><Link href="/aicte">AICTE</Link></Box>
-                          <Box margin={5}><Link href="/naac">NAAC</Link></Box>
-                          <Box margin={5}><Link href="/nirf">NIRF</Link></Box>
-                          <Box margin={5}><Link href="/aishe">AISHE</Link></Box>
-                        </PopoverBody>
-                      </PopoverContent>
-                    </Portal>
-                  </Popover>
-                </Box> */}
               </PopoverBody>
             </PopoverContent>
           </Portal>
@@ -64,7 +47,28 @@ export default function Navbar() {
           </Portal>
         </Popover>
       </Box>
-      <Box margin={5}><Link href="/">Collection</Link></Box>
+      <Box margin={5}>
+        <Popover trigger="hover">
+          <PopoverTrigger>
+            <Link href="#">Collection</Link>
+          </PopoverTrigger>
+          <Portal>
+            <PopoverContent>
+              <PopoverBody>
+                <Box margin={5}><Link href="/">Print Books</Link></Box>
+                <Box margin={5}><Link href="/">Electronic Books</Link></Box>
+                <Box margin={5}><Link href="/">Text Books</Link></Box>
+                <Box margin={5}><Link href="/">Reference Books</Link></Box>
+                <Box margin={5}><Link href="/">{`Children's Books`}</Link></Box>
+                <Box margin={5}><Link href="/">Multimedia Collection</Link></Box>
+                <Box margin={5}><Link href="/">Theses</Link></Box>
+                <Box margin={5}><Link href="/">Reports</Link></Box>
+                <Box margin={5}><Link href="/">Specialized Centre Collections</Link></Box>
+              </PopoverBody>
+            </PopoverContent>
+          </Portal>
+        </Popover>
+      </Box>
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
@@ -73,7 +77,14 @@ export default function Navbar() {
           <Portal>
             <PopoverContent>
               <PopoverBody>
-                <Box margin={5}><Link href="/"></Link></Box>
+                <Box margin={5}><Link href="/">Current Awareness Services</Link></Box>
+                <Box margin={5}><Link href="/">CD-RoM/DVD Collection</Link></Box>
+                <Box margin={5}><Link href="/">Circulation Service</Link></Box>
+                <Box margin={5}><Link href="/">Digital Library Service</Link></Box>
+                <Box margin={5}><Link href="/">Reference Service</Link></Box>
+                <Box margin={5}><Link href="/">Inter-Library Loan (ILL)</Link></Box>
+                <Box margin={5}><Link href="/">Photocopy Services</Link></Box>
+                <Box margin={5}><Link href="/">User Centric Workshops/Trainings/Talks</Link></Box>
               </PopoverBody>
             </PopoverContent>
           </Portal>
@@ -87,26 +98,37 @@ export default function Navbar() {
           <Portal>
             <PopoverContent>
               <PopoverBody>
-                <Box margin={5}><Link href="/"></Link></Box>
+                <Box margin={5}><Link href="/">Research Tools</Link></Box>
+                <Box margin={5}><Link href="/">Ask for Article and Inter Library Loan</Link></Box>
+                <Box margin={5}><Link href="/">Open Access Resources</Link></Box>
+                <Box margin={5}><Link href="/">Reference Management Tools</Link></Box>
+                <Box margin={5}><Link href="/">Faculty Publications</Link></Box>
+                <Box margin={5}><Link href="/">Author Profiles Platform</Link></Box>
+                <Box margin={5}>
+                  <Popover trigger="hover">
+                    <PopoverTrigger>
+                      <Text>Useful Links</Text>
+                    </PopoverTrigger>
+                    <Portal>
+                      <PopoverContent>
+                        <PopoverBody>
+                          <Box margin={5}><Link href="/">Shodhganga</Link></Box>
+                          <Box margin={5}><Link href="/">ShodhGangotri</Link></Box>
+                          <Box margin={5}><Link href="/">Academic Integrity and Prevention of Plagiarism Regulation 2018</Link></Box>
+                          <Box margin={5}><Link href="/">Open Access Theses and Dissertations</Link></Box>
+                          <Box margin={5}><Link href="/">Journal Finder</Link></Box>
+                          <Box margin={5}><Link href="/">Journal Ranking</Link></Box>
+                        </PopoverBody>
+                      </PopoverContent>
+                    </Portal>
+                  </Popover>
+                </Box>
               </PopoverBody>
             </PopoverContent>
           </Portal>
         </Popover>
       </Box>
-      <Box margin={5}>
-        <Popover trigger="hover">
-          <PopoverTrigger>
-            <Link href="/">Ask the Librarian</Link>
-          </PopoverTrigger>
-          <Portal>
-            <PopoverContent>
-              <PopoverBody>
-                <Box margin={5}><Link href="/"></Link></Box>
-              </PopoverBody>
-            </PopoverContent>
-          </Portal>
-        </Popover>
-      </Box>
+      <Box margin={5}><Link href="/">Ask the Librarian</Link></Box>
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
@@ -115,7 +137,9 @@ export default function Navbar() {
           <Portal>
             <PopoverContent>
               <PopoverBody>
-                <Box margin={5}><Link href="/"></Link></Box>
+                <Box margin={5}><Link href="/">Write Up</Link></Box>
+                <Box margin={5}><Link href="/">Library Team Members</Link></Box>
+                <Box margin={5}><Link href="/">LAC Members</Link></Box>
               </PopoverBody>
             </PopoverContent>
           </Portal>
