@@ -1,16 +1,31 @@
 import React from 'react';
 
-import { Box, Flex, Image, Link, Popover, PopoverBody, PopoverContent, PopoverTrigger, Portal, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Collapse,
+  Flex,
+  IconButton,
+  Image,
+  Link,
+  Popover,
+  PopoverBody,
+  PopoverContent,
+  PopoverTrigger,
+  Portal,
+  Text,
+  useDisclosure
+} from '@chakra-ui/react';
+import { ChevronDownIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import MediaQuery from 'react-responsive';
 
-
-export default function Navbar() {
+function NavInternal() {
   return (
-    <Flex alignItems="center" justifyContent="center">
+    <>
       <Box margin={5}><Link href="/">Home</Link></Box>
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Find</Link>
+            <Link href="#">Find <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -32,7 +47,7 @@ export default function Navbar() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Borrow</Link>
+            <Link href="#">Borrow <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -50,7 +65,7 @@ export default function Navbar() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Collection</Link>
+            <Link href="#">Collection <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -72,7 +87,7 @@ export default function Navbar() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="/">Services</Link>
+            <Link href="#">Services <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -93,7 +108,7 @@ export default function Navbar() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="/">Research Support</Link>
+            <Link href="#">Research Support <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -107,7 +122,7 @@ export default function Navbar() {
                 <Box margin={5}>
                   <Popover trigger="hover">
                     <PopoverTrigger>
-                      <Text>Useful Links</Text>
+                      <Text>Useful Links <ChevronDownIcon /></Text>
                     </PopoverTrigger>
                     <Portal>
                       <PopoverContent>
@@ -132,7 +147,7 @@ export default function Navbar() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="/">About Us</Link>
+            <Link href="/">About Us <ChevronDownIcon /></Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -145,9 +160,42 @@ export default function Navbar() {
           </Portal>
         </Popover>
       </Box>
-      <Box margin={5}>
-        <Image width={150} src="/LNMIIT-logo-transparent.png" alt="LNMIIT logo" />
-      </Box>
-    </Flex>
+    </>
+  );
+}
+
+export default function Navbar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <>
+      <MediaQuery maxWidth={876}>
+        <Flex direction="column">
+          <Flex direction="row" alignItems="center" justifyContent="space-between">
+            <IconButton
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              onClick={isOpen ? onClose : onOpen}
+              margin="0 20px"
+            />
+            <Box margin={5}>
+              <Image width={150} src="/LNMIIT-logo-transparent.png" alt="LNMIIT logo" />
+            </Box>
+          </Flex>
+          <Collapse in={isOpen} animateOpacity>
+            <Flex direction="column" alignItems="center" justifyContent="center">
+              <NavInternal />
+            </Flex>
+          </Collapse>
+        </Flex>
+      </MediaQuery>
+      <MediaQuery minWidth={877}>
+        <Flex direction="row" alignItems="center" justifyContent="center">
+          <NavInternal />
+          <Box margin={5}>
+            <Image width={150} src="/LNMIIT-logo-transparent.png" alt="LNMIIT logo" />
+          </Box>
+        </Flex>
+      </MediaQuery>
+    </>
   );
 }
