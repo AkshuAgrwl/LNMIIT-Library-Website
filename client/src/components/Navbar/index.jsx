@@ -4,6 +4,7 @@ import {
   Box,
   Collapse,
   Flex,
+  Icon,
   IconButton,
   Image,
   Link,
@@ -15,7 +16,7 @@ import {
   Text,
   useDisclosure
 } from '@chakra-ui/react';
-import { ChevronDownIcon, CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { MdKeyboardArrowDown, MdMenu, MdOutlineClose } from 'react-icons/md';
 import MediaQuery from 'react-responsive';
 
 function NavInternal() {
@@ -25,7 +26,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Find <ChevronDownIcon /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Find <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -47,7 +52,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Borrow <ChevronDownIcon /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Borrow <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -65,7 +74,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Collection <ChevronDownIcon /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Collection <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -87,7 +100,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Services <ChevronDownIcon /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Services <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -108,7 +125,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Research Support <ChevronDownIcon /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Research Support <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -122,7 +143,9 @@ function NavInternal() {
                 <Box margin={5}>
                   <Popover trigger="hover">
                     <PopoverTrigger>
-                      <Text>Useful Links <ChevronDownIcon /></Text>
+                      <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                        Useful Links <Icon as={MdKeyboardArrowDown} />
+                      </Text>
                     </PopoverTrigger>
                     <Portal>
                       <PopoverContent>
@@ -147,7 +170,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="/">About Us <ChevronDownIcon /></Link>
+            <Link href="/">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                About Us <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -173,7 +200,7 @@ export default function Navbar() {
         <Flex direction="column">
           <Flex direction="row" alignItems="center" justifyContent="space-between">
             <IconButton
-              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              icon={isOpen ? <Icon as={MdOutlineClose} /> : <Icon as={MdMenu} />}
               onClick={isOpen ? onClose : onOpen}
               margin="0 20px"
             />
