@@ -26,7 +26,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Find <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Find <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -48,7 +52,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Borrow <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Borrow <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -66,7 +74,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Collection <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Collection <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -88,7 +100,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Services <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Services <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -109,7 +125,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="#">Research Support <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="#">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                Research Support <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
@@ -123,7 +143,9 @@ function NavInternal() {
                 <Box margin={5}>
                   <Popover trigger="hover">
                     <PopoverTrigger>
-                      <Text>Useful Links <Icon as={MdKeyboardArrowDown} /></Text>
+                      <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                        Useful Links <Icon as={MdKeyboardArrowDown} />
+                      </Text>
                     </PopoverTrigger>
                     <Portal>
                       <PopoverContent>
@@ -148,7 +170,11 @@ function NavInternal() {
       <Box margin={5}>
         <Popover trigger="hover">
           <PopoverTrigger>
-            <Link href="/">About Us <Icon as={MdKeyboardArrowDown} /></Link>
+            <Link href="/">
+              <Text display="flex" alignItems="center" whiteSpace="pre-wrap">
+                About Us <Icon as={MdKeyboardArrowDown} />
+              </Text>
+            </Link>
           </PopoverTrigger>
           <Portal>
             <PopoverContent>
